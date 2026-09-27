@@ -72,6 +72,9 @@ export async function generate(modelId, returnDate, reason) {
     .replace(/^["'“]|["'”]$/g, "")
     .trim();
 
+  // Fall back to a deterministic, guaranteed-professional template whenever
+  // the model refused, rambled past a sane length, or produced a message
+  // that doesn't actually mention the given return date or reason.
   const message = looksUnusable(text) || !mentionsBoth(text, returnDate, reason)
     ? FALLBACK(returnDate, reason)
     : text;

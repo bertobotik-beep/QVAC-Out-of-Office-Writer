@@ -1,0 +1,25 @@
+{
+  "name": "qvac-out-of-office-writer",
+  "version": "1.0.0",
+  "description": "Enter your return date and reason and an on-device AI writes a professional out-of-office auto-reply using those details. No cloud call, no API key.",
+  "type": "module",
+  "main": "src/gui.js",
+  "scripts": {
+    "start": "node src/gui.js",
+    "gui": "node src/gui.js"
+  },
+  "keywords": [
+    "qvac",
+    "on-device-ai",
+    "productivity",
+    "llm",
+    "offline-ai"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@qvac/sdk": "^0.19.0"
+  },
+  "engines": {
+    "node": ">=22.17"
+  }
+}
